@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  @apply text-gray-500;
+}
+
+.hamburger{
+  position: relative;
+}
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom{
+  position: absolute;
+  top: 32%;
+  left: 22%;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hamburger-middle{
+  transform: translateY(5px);
+}
+
+.hamburger-bottom{
+  transform: translateY(10px);
+}
+
+.open span.hamburger-top {
+  background-color: #FF6B66;
+  transform: rotate(45deg) translate(-2px, 2px);
+}
+
+.open span.hamburger-middle {
+  opacity: 0;
+}
+
+.open span.hamburger-bottom {
+  background-color: #FF6B66;
+  transform: rotate(-45deg) translate(-2px, -2px);
+}
